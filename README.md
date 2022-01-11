@@ -76,6 +76,8 @@ Matlab-Numpy Interface [https://github.com/kwikteam/npy-matlab]
 ### Sample Data
 A sample intersection data can be downloaded from [here](https://drive.google.com/file/d/1inC5DblWC84UBXTW3gZWK6VQwGN3Kwx1/view?usp=sharing).
 
+**Note:** For reading `/radar_scan` and `/darknet_ros/bounding_boxes` topics, you would first need to build custom ROS messages. See [MATLAB's instructions](https://www.mathworks.com/help/ros/ug/create-custom-messages-from-ros-package.html) on how to do it. Once custom message type is built, you can read the data from the .bag file in the MATLAB environment.
+
 ### Generating Radar-Camera Labelled Dataset
 #### Run Source File
 ```
