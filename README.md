@@ -1,5 +1,6 @@
 ## Project Title
 **Automatic Radar-Camera Dataset Generation for Sensor-Fusion Applications**
+
 **Publication**: A. Sengupta, A. Yoshizawa, and S. Cao, "_Automatic Radar-Camera Dataset Generation for Sensor-Fusion Applications_", in IEEE Robotics and Automation Letters, 2022. (Conditionally Accepted)
 ---
 #### Authors: [Arindam Sengupta](http://u.arizona.edu/~sengupta/), Atshushi Yoshizawa, [Dr. Siyang Cao](https://uweb.engr.arizona.edu/~caos/)
