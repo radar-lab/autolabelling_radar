@@ -99,7 +99,7 @@ The intermediate steps described above has been depicted through an example belo
   <img src="https://github.com/radar-lab/autolabelling_radar/blob/main/Auxiliary/exampleRC.gif" width="700" />
 </p>
 
-### Generating Radar-Camera Labelled Dataset
+### Generating Radar Only Labelled Dataset
 #### Run Source File
 ```
 Run Source Codes/main_Rad_Only.m
