@@ -45,7 +45,7 @@ The data from radar and camera was acquired using a ROS pipeline using three mai
 The `usb_webcam` package reads the raw image from the camera (30fps) and uses the estimated camera intrinsic parameters to rectify and undistort the image, published as a compressed message `/image_rect/compressed`, that also accompanies a time-stamp header. The `darknet_ros` package uses an OpenCV bridge to subscribe to the rectified image and subjects it to a YOLO classification network that outputs the bounding boxes and class of the objects in the image via `/bounding_boxes` message, along with the image acquisition and prediction time-stamps. Besides the bounding box co-ordinates, this package also publishes an image output via. `/detection_image`, with the bounding boxes overlaid on the rectified image input. During the data collection phase, these four message topics are subscribed and saved in ROS bag files for the next steps.
 
 ## Autolabelling Schemes
-
+#### Note: While the current source code is constructed to work with ROSbag files, it can be duly modified to fit your input data specifications.
 ### Requirements
 ```
 MATLAB R2019 (or higher)
@@ -53,3 +53,5 @@ ROS Toolbox
 Custom ROS message [https://www.mathworks.com/help/ros/ug/create-custom-messages-from-ros-package.html]
 Matlab-Numpy Interface [https://github.com/kwikteam/npy-matlab]
 ```
+## Sample Data
+A sample intersection data can be downloaded from [here](https://drive.google.com/file/d/1inC5DblWC84UBXTW3gZWK6VQwGN3Kwx1/view?usp=sharing).
