@@ -32,9 +32,9 @@ Ubuntu 18 (Bionic Beaver)
 
 ### ROS Packages
 ```
-mm_radar [Link](https://github.com/radar-lab/ti_mmwave_rospkg)
-usb_webcam [Link](https://github.com/radar-lab/usb_webcam)
-darknet_ros [Link](https://github.com/leggedrobotics/darknet_ros)
+mm_radar [Link: https://github.com/radar-lab/ti_mmwave_rospkg)
+usb_webcam [Link: https://github.com/radar-lab/usb_webcam)
+darknet_ros [Link: https://github.com/leggedrobotics/darknet_ros)
 ```
 <p float="center">
   <img src="https://github.com/radar-lab/autolabelling_radar/blob/main/Auxiliary/Pipeline.png" width="700" />
@@ -44,3 +44,12 @@ The data from radar and camera was acquired using a ROS pipeline using three mai
 
 The `usb_webcam` package reads the raw image from the camera (30fps) and uses the estimated camera intrinsic parameters to rectify and undistort the image, published as a compressed message `/image_rect/compressed`, that also accompanies a time-stamp header. The `darknet_ros` package uses an OpenCV bridge to subscribe to the rectified image and subjects it to a YOLO classification network that outputs the bounding boxes and class of the objects in the image via `/bounding_boxes` message, along with the image acquisition and prediction time-stamps. Besides the bounding box co-ordinates, this package also publishes an image output via. `/detection_image`, with the bounding boxes overlaid on the rectified image input. During the data collection phase, these four message topics are subscribed and saved in ROS bag files for the next steps.
 
+## Autolabelling Schemes
+
+### Requirements
+```
+MATLAB R2019 (or higher)
+ROS Toolbox
+Custom ROS message [https://www.mathworks.com/help/ros/ug/create-custom-messages-from-ros-package.html]
+Matlab-Numpy Interface [https://github.com/kwikteam/npy-matlab]
+```
