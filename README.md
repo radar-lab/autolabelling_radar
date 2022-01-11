@@ -53,5 +53,22 @@ ROS Toolbox
 Custom ROS message [https://www.mathworks.com/help/ros/ug/create-custom-messages-from-ros-package.html]
 Matlab-Numpy Interface [https://github.com/kwikteam/npy-matlab]
 ```
-## Sample Data
+### Sample Data
 A sample intersection data can be downloaded from [here](https://drive.google.com/file/d/1inC5DblWC84UBXTW3gZWK6VQwGN3Kwx1/view?usp=sharing).
+
+### Generating Radar-Camera Labelled Dataset
+#### Run Source File
+```
+Run Source Codes/main_Rad_Cam.m
+Notes: 
+1. Modify Line 24 to set path to your input file
+2. Modify Lines 30-39 to set path for your generated dataset 
+```
+#### Underlying Algorithm
+<p float="center">
+  <img src="https://github.com/radar-lab/autolabelling_radar/blob/main/Auxiliary/algo1.png" width="700" />
+</p>
+
+The first data-set consists of labeled radar-image pairs from the same objects in a given frame, over all the $N$ frames. The radar points are first congregated to form frame-wise radar PCL data using the `PointID` parameter. Recall that the `PointID`s are always in an ascending order in a frame, starting at 0. The radar time-stamp ($TS_R$) of a given frame is set to be the time-stamp at which was PointID=0 was received. Similarly ($TS_I$) and ($TS_{BB}$) represent the time-stamps of the image and the YOLO bounding box (YOLOBBox) predictions, respectively. In each of the radar frames, DBSCAN is performed on the 3-D PCL data to segregate multiple target clusters. The 3-D centroids of the clusters are then projected onto the corresponding (using $TS_R$ and $TS_I$) camera image of the scene by using the Radar-to-Camera transformation matrix $TM$ estimated during Section~\ref{cocal}. Similarly, the corresponding YOLO bounding boxes and classes are then determined (using $TS_R$, $TS_I$ and $TS_{BB}$). The pixel indices of the YOLO centroids and the projected radar cluster centroids are then subjected to the Hungarian Algorithm for intra-frame radar-to-image association. For every associated YOLO-cluster pair (i) the image-region inside the bounding box is cropped and reshaped to a 64$\times$64$\times$3 png file (CropImg), and (ii) the X,Y,Z, Doppler and SNR of all the points from the radar cluster, are saved to disk as Numpy arrays, with the YOLO class as the label. 
+
+The intermediate steps described above has been depicted through an example below. 
