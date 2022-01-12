@@ -1,7 +1,7 @@
 ## Project Title
 **Automatic Radar-Camera Dataset Generation for Sensor-Fusion Applications**
 ---
-#### Authors: [Arindam Sengupta](http://u.arizona.edu/~sengupta/), Atshushi Yoshizawa, [Dr. Siyang Cao](https://uweb.engr.arizona.edu/~caos/)
+#### Authors: [Arindam Sengupta](http://u.arizona.edu/~sengupta/), Atsushi Yoshizawa, [Dr. Siyang Cao](https://uweb.engr.arizona.edu/~caos/)
 #### Organization: University of Arizona
 #### Email: sengupta@email.arizona.edu | caos@email.arizona.edu
 #### This work is supported by Sony Research Award Program
