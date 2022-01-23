@@ -6,7 +6,7 @@
 #### Email: sengupta@email.arizona.edu | caos@email.arizona.edu
 #### This work is supported by Sony Research Award Program
 
-#### Publication: A. Sengupta, A. Yoshizawa, and S. Cao, "_Automatic Radar-Camera Dataset Generation for Sensor-Fusion Applications_", in IEEE Robotics and Automation Letters, 2022. (Conditionally Accepted)
+#### Please Cite: A. Sengupta, A. Yoshizawa and S. Cao, "Automatic Radar-Camera Dataset Generation for Sensor-Fusion Applications," in IEEE Robotics and Automation Letters, doi: 10.1109/LRA.2022.3144524.
 ---
 
 ## Project Overview
